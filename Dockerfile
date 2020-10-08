@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get install -y file git make gcc g++ automake autoconf libbz2-dev libz-dev wget
+    apt-get install -y file git make gcc g++ automake autoconf libbz2-dev libz-dev wget liblz4-dev
 
 RUN git clone --depth 1 https://github.com/yinqiwen/ardb.git && \
     storage_engine=rocksdb make -C ardb
